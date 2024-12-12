@@ -1,0 +1,45 @@
+name: task_planner
+description: A task planner application.
+version: 1.2.0+1
+publish_to: none
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  bloc: ^8.1.4
+  equatable: ^2.0.5
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.19.0
+  local_storage_category_api:
+    path: packages/local_storage_category_api
+  category_api:
+    path: packages/category_api
+  category_repository:
+    path: packages/category_repository
+  local_storage_tasks_api:
+    path: packages/local_storage_tasks_api
+  shared_preferences: ^2.0.15
+  tasks_api:
+    path: packages/tasks_api
+  tasks_repository:
+    path: packages/tasks_repository
+  stream_transform: ^2.1.0
+
+dev_dependencies:
+  bloc_test: ^9.1.7
+  build_runner: ^2.4.7
+  flutter_test:
+    sdk: flutter
+  intl_utils: ^2.8.0
+  json_serializable: ^6.7.1
+  mocktail: ^1.0.4
+  very_good_analysis: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true

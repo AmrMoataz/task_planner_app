@@ -1,0 +1,15 @@
+name: category_repository
+description: A repository that handles category related requests.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  category_api:
+    path: ../category_api
+
+dev_dependencies:
+  test: ^1.24.6
+  very_good_analysis: ^5.1.0
