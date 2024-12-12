@@ -157,7 +157,7 @@ class _DateField extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     final state = context.watch<EditTaskBloc>().state;
-    final currentDate = state.due ?? DateTime.now();
+    final currentDate = state.due;
 
     return TextFormField(
       key: const Key('editTaskView_date_textFormField'),
@@ -168,16 +168,17 @@ class _DateField extends StatelessWidget {
       ),
       readOnly: true,
       controller: TextEditingController(
-        text: currentDate.toLocal().toString().split(' ')[0],
+        text: currentDate?.toString().split(' ')[0] ?? '',
       ),
       onTap: () async {
+        final today = DateTime.now();
         final pickedDate = await showDatePicker(
           context: context,
-          initialDate: currentDate,
-          firstDate: DateTime.now(),
-          lastDate: DateTime.now().add(const Duration(days: 365)),
+          initialDate: currentDate ?? today,
+          firstDate: today,
+          lastDate: today.add(const Duration(days: 365)),
         );
-        if (pickedDate != null) {
+        if (pickedDate != null && pickedDate != today) {
           context.read<EditTaskBloc>().add(EditTaskDateChanged(pickedDate));
         }
       },

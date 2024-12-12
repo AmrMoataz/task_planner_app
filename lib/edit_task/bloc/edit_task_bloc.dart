@@ -82,7 +82,7 @@ class EditTaskBloc extends Bloc<EditTaskEvent, EditTaskState> {
     EditTaskDateChanged event,
     Emitter<EditTaskState> emit,
   ) {
-    if (event.date.isBefore(DateTime.now())) {
+    if (event.date.isBefore(DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day))) {
       emit(state.copyWith(status: EditTaskStatus.invalidInput));
       return;
     }

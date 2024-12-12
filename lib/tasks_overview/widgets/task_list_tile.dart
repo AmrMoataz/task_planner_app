@@ -79,11 +79,11 @@ class TaskListTile extends StatelessWidget {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: !task.isCompleted
-              ? null
-              : TextStyle(
-                  color: captionColor,
-                  decoration: TextDecoration.lineThrough,
-                ),
+                    ? null
+                    : TextStyle(
+                        color: captionColor,
+                        decoration: TextDecoration.lineThrough,
+                      ),
               ),
               const SizedBox(width: 8),
               Icon(
@@ -93,10 +93,24 @@ class TaskListTile extends StatelessWidget {
               TaskPriorityIndicator(priority: task.priority),
             ],
           ),
-          subtitle: Text(
-            task.description,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
+          subtitle: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                task.description,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+              const SizedBox(height: 5),
+              if (!inToday && task.due != null)
+                Text(
+                  '${task.due!.day}.${task.due!.month}.${task.due!.year}',
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                    fontSize: 8,
+                  ),
+                ),
+            ],
           ),
           leading: inToday
               ? Checkbox(
