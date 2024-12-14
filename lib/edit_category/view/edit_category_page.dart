@@ -43,6 +43,7 @@ class EditCategoryView extends StatelessWidget {
     final status = context.select((EditCategoryBloc bloc) => bloc.state.status);
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.surface,
         title: Text(l10n.editCategoryAppBarTitle),
       ),
       floatingActionButton: FloatingActionButton(

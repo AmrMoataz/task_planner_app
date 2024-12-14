@@ -23,9 +23,9 @@ Map<String, dynamic> _$TaskToJson(Task instance) => <String, dynamic>{
       'description': instance.description,
       'isCompleted': instance.isCompleted,
       'category': instance.category,
-      'quadrant': _$TaskQuadrantEnumMap[instance.quadrant]!,
+      'quadrant': _$TaskQuadrantEnumMap[instance.quadrant],
       'due': instance.due?.toIso8601String(),
-      'priority': _$TaskPriorityEnumMap[instance.priority]!,
+      'priority': _$TaskPriorityEnumMap[instance.priority],
     };
 
 const _$TaskQuadrantEnumMap = {

@@ -30,6 +30,7 @@ class StatsView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(l10n.statsAppBarTitle),
+        backgroundColor: Theme.of(context).colorScheme.surface,
       ),
       body: Column(
         children: [

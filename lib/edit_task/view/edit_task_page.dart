@@ -50,6 +50,7 @@ class EditTaskView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.surface,
         title: Text(
           isNewTask
               ? l10n.editTaskAddAppBarTitle

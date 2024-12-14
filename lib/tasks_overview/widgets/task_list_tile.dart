@@ -65,9 +65,9 @@ class TaskListTile extends StatelessWidget {
                 ? Border(
                     left: BorderSide(
                         color: Color(int.parse(task.category.color.substring(1),
-                                radix: 16) |
-                            0xFF000000)))
-                : null),
+                                radix: 16,) |
+                            0xFF000000,),),)
+                : null,),
         margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         child: ListTile(
           onTap: onTap,
@@ -126,7 +126,7 @@ class TaskListTile extends StatelessWidget {
                       task.due?.month == DateTime.now().month &&
                       task.due?.year == DateTime.now().year
                   ? Icon(Icons.today,
-                      color: Theme.of(context).colorScheme.primary)
+                      color: Theme.of(context).colorScheme.primary,)
                   : null,
           trailing: onTap == null ? null : const Icon(Icons.chevron_right),
         ),

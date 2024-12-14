@@ -50,7 +50,7 @@ class TodaysTasksBloc extends Bloc<TodaysTasksEvent, TodaysTasksState> {
   return tasks.where((task) => task.due != null &&
       task.due!.year == now.year &&
       task.due!.month == now.month &&
-      task.due!.day == now.day).toList();
+      task.due!.day == now.day,).toList();
 }
 
   Future<void> _onTodaysTasksTaskCompletionToggled(

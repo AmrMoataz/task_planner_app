@@ -38,6 +38,7 @@ class TasksOverviewView extends StatelessWidget {
           TasksOverviewFilterButton(),
           TasksOverviewOptionsButton(),
         ],
+        backgroundColor: Theme.of(context).colorScheme.surface,
       ),
       body: MultiBlocListener(
         listeners: [

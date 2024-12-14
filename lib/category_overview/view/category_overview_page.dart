@@ -34,6 +34,7 @@ class CategoryOverviewView extends StatelessWidget {
         actions: const [
           CategoriesOverviewEditButton(),
         ],
+        backgroundColor: Theme.of(context).colorScheme.surface,
       ),
       body: MultiBlocListener(
         listeners: [
@@ -70,15 +71,15 @@ class CategoryOverviewView extends StatelessWidget {
                       l10n.categoriesOverviewEmptyText,
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
-                  )
-                ]);
+                  ),
+                ],);
               }
             }
 
             return Column(
               children: [
                 const Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(16),
                   child: _SearchField(),
                 ),
                 Expanded(

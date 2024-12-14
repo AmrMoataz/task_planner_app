@@ -1,6 +1,6 @@
 {
     "@@locale": "ar",
-    "tasksOverviewAppBarTitle": "Tasks Backlog",
+    "tasksOverviewAppBarTitle": "Backlog",
     "@tasksOverviewAppBarTitle": {},
 	"tasksOverviewFilterTooltip": "Filter",
 	"@tasksOverviewFilterTooltip": {},

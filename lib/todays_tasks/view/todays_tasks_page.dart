@@ -34,6 +34,7 @@ class TodaysTasksView extends StatelessWidget {
       appBar: AppBar(
         title: Text(l10n.todaysTasksAppBarTitle),
         actions: const [],
+        backgroundColor: Theme.of(context).colorScheme.surface,
       ),
       body: MultiBlocListener(
           listeners: [
