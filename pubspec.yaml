@@ -28,7 +28,7 @@ dependencies:
     path: packages/tasks_api
   tasks_repository:
     path: packages/tasks_repository
-  stream_transform: ^2.1.0
+  stream_transform: ^2.1.1
 
 dev_dependencies:
   bloc_test: ^9.1.7
