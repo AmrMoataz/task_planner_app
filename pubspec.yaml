@@ -23,7 +23,7 @@ dependencies:
     path: packages/category_repository
   local_storage_tasks_api:
     path: packages/local_storage_tasks_api
-  shared_preferences: ^2.0.15
+  shared_preferences: ^2.3.4
   tasks_api:
     path: packages/tasks_api
   tasks_repository:
